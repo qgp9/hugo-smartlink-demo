@@ -1,11 +1,160 @@
 baseURL = 'https://qgp9.github.io/hugo-smartlink-demo/'
 relativeURLs = false
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Hugo SmartLink Demo'
 
+# Enable features
+enableGitInfo = true
+enableEmoji = true
+enableRobotsTXT = true
 
+# Build settings
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Performance
+minify = true
+gc = true
+
+# Module configuration
 [module]
 [[module.imports]]
-path = 'github.com/McShelby/hugo-theme-relearn'
+  path = 'github.com/qgp9/hugo-smartlink'
 [[module.imports]]
-path = 'github.com/qgp9/hugo-smartlink'
+  path = 'github.com/McShelby/hugo-theme-relearn'
+
+# Site parameters
+[params]
+  description = "Comprehensive demonstration of Hugo SmartLink module capabilities"
+  author = "Hugo SmartLink Team"
+  github = "https://github.com/qgp9/hugo-smartlink"
+  
+  # SmartLink module configuration
+  [params.modules]
+    [params.modules.smartlink]
+      output = "html"
+      normalizeEscapedWikilink = true
+      
+      # Prefix aliases for demonstration
+      [params.modules.smartlink.prefixAlias]
+        "docs:" = "/documentation/"
+        "~" = "/home/"
+        "gh:" = "https://github.com/qgp9/hugo-smartlink/"
+      
+      # Comprehensive rule set for demonstrations
+      [[params.modules.smartlink.rules]]
+        name = "JIRA Issue"
+        pattern = "^([A-Z][A-Z0-9]+-[0-9]+)$"
+        url = "https://example.atlassian.net/browse/{0}"
+        class = "jira-link"
+      
+      [[params.modules.smartlink.rules]]
+        name = "GitHub Issue"
+        pattern = "^#([0-9]+)$"
+        url = "https://github.com/qgp9/hugo-smartlink/issues/{1}"
+        class = "github-issue"
+      
+      [[params.modules.smartlink.rules]]
+        name = "GitHub PR"
+        pattern = "^PR#([0-9]+)$"
+        url = "https://github.com/qgp9/hugo-smartlink/pull/{1}"
+        class = "github-pr"
+      
+      [[params.modules.smartlink.rules]]
+        name = "Slack Channel"
+        pattern = "^slack:#([a-z0-9-]+)$"
+        url = "https://company.slack.com/app_redirect?channel={1}"
+        class = "slack-channel"
+      
+      [[params.modules.smartlink.rules]]
+        name = "Email Link"
+        pattern = "^email:(.+)$"
+        url = "mailto:{1}"
+        class = "email-link"
+      
+      [[params.modules.smartlink.rules]]
+        name = "WikiLink"
+        wikiLink = true
+        stripNamespace = true
+        class = "wikilink"
+      
+      [[params.modules.smartlink.rules]]
+        name = "Broken Link"
+        pattern = "^.*$"
+        url = "/broken-link/"
+        class = "broken-link"
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  
+  [[menu.main]]
+    identifier = "examples"
+    name = "Examples"
+    url = "/examples/"
+    weight = 2
+  
+  [[menu.main]]
+    identifier = "documentation"
+    name = "Documentation"
+    url = "/documentation/"
+    weight = 3
+  
+  [[menu.main]]
+    identifier = "interactive"
+    name = "Interactive"
+    url = "/interactive/"
+    weight = 4
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    noHl = false
+    tabWidth = 4
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineNoStart = 1
+    hl_Lines = ""
+    hl_inline = false
+
+# Security headers
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+  
+  [security.funcs]
+    getenv = ['^HUGO_']
+  
+  [security.http]
+    methods = ['(?i)GET|POST|HEAD']
+    schemes = ['(?i)^HTTPSE?$']
+    urls = ['.*']
+
+# Server configuration
+[server]
+  [server.headers]
+    [server.headers."/*"]
+      X-Frame-Options = "DENY"
+      X-Clacks-Overhead = "GNU Terry Pratchett"
+      X-XSS-Protection = "1; mode=block"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "strict-origin-when-cross-origin"
