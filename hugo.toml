@@ -26,8 +26,8 @@ gc = true
 
 # Site parameters
 [params]
-  description = "Comprehensive demonstration of Hugo SmartLink module capabilities"
-  author = "Hugo SmartLink Team"
+  [params.author]
+    name = "QGP9"
   github = "https://github.com/qgp9/hugo-smartlink"
   
   # SmartLink module configuration
@@ -138,7 +138,7 @@ gc = true
 # Security headers
 [security]
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
   
   [security.funcs]
