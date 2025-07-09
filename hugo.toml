@@ -1,4 +1,5 @@
 baseURL = 'https://qgp9.github.io/hugo-smartlink-demo/'
+relativeURLs = false
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 
