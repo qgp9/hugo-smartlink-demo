@@ -26,6 +26,9 @@ gc = true
 
 # Site parameters
 [params]
+  hideAuthorName = true
+  editURL = "https://github.com/qgp9/hugo-smartlink-demo/edit/main/content/"
+
   [params.author]
     name = "QGP9"
   github = "https://github.com/qgp9/hugo-smartlink"
@@ -87,29 +90,17 @@ gc = true
 
 # Menu configuration
 [menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  
-  [[menu.main]]
-    identifier = "examples"
-    name = "Examples"
-    url = "/examples/"
-    weight = 2
-  
-  [[menu.main]]
-    identifier = "documentation"
-    name = "Documentation"
-    url = "/documentation/"
-    weight = 3
-  
-  [[menu.main]]
-    identifier = "interactive"
-    name = "Interactive"
-    url = "/interactive/"
-    weight = 4
+[[menu.shortcuts]]
+  pre = '<i class="fab fa-github"></i> '
+  name = 'Demo Repo'
+  url = 'https://github.com/qgp9/hugo-smartlink-demo'
+  weight = 1
+
+[[menu.shortcuts]]
+  pre = '<i class="fab fa-github"></i> '
+  name = 'SmartLink Module'
+  url = 'https://github.com/qgp9/hugo-smartlink'
+  weight = 2
 
 # Taxonomies
 [taxonomies]
