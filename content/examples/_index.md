@@ -32,20 +32,78 @@ SmartLink can integrate with various external systems and tools:
 - [[BUG-456]] - Bug report (created with `[[BUG-456]]`)
 - [[FEAT-789]] - Feature request (created with `[[FEAT-789]]`)
 
+{{% notice title="Configuration" expanded="false" %}}
+```toml
+[[params.modules.smartlink.rules]]
+   name = "JIRA Issue"
+   pattern = "^([A-Z][A-Z0-9]+-[0-9]+)$"
+   url = "https://example.atlassian.net/browse/{0}"
+   class = "jira-link"
+```
+{{% /notice %}}
+
 ### GitHub Integration
 - [[#42]] - GitHub issue (created with `[[#42]]`)
 - [[PR#15]] - Pull request (created with `[[PR#15]]`)
 - [[gh:issues/42]] - Using prefix alias (created with `[[gh:issues/42]]`)
 - [[https://github.com/qgp9/hugo-smartlink/issues/123]] - Displays as 'qgp9/hugo-smartlink#123' (created with `[[https://github.com/qgp9/hugo-smartlink/issues/123]]`)
 
+{{% notice title="Configuration" expanded="false" %}}
+```toml
+[[params.modules.smartlink.rules]]
+  name = "GitHub Issue"
+  pattern = "^#([0-9]+)$"
+  url = "https://github.com/qgp9/hugo-smartlink/issues/{1}"
+  class = "github-issue"
+
+[[params.modules.smartlink.rules]]
+  name = "GitHub PR"
+  pattern = "^PR#([0-9]+)$"
+  url = "https://github.com/qgp9/hugo-smartlink/pull/{1}"
+  class = "github-pr"
+
+[[params.modules.smartlink.rules]]
+  name = "GitHub Issue URL Shortener"
+  pattern = "^https:\/\/github\.com\/([^/]+)\/([^/]+)\/issues\/(\d+)$"
+  label = "{1}/{2}#{3}"
+  class = "github-url-shortener"
+```
+{{% /notice %}}
+
 ### Communication Tools
 - [[slack:#general]] - Slack channel (created with `[[slack:#general]]`)
 - [[slack:#random]] - Another Slack channel (created with `[[slack:#random]]`)
 - [[email:team@company.com]] - Email link (created with `[[email:team@company.com]]`)
 
+{{% notice title="Configuration" expanded="false" %}}
+```toml
+[[params.modules.smartlink.rules]]
+  name = "Slack Channel"
+  pattern = "^slack:#([a-z0-9-]+)$"
+  url = "https://company.slack.com/app_redirect?channel={1}"
+  class = "slack-channel"
+
+[[params.modules.smartlink.rules]]
+  name = "Email Link"
+  pattern = "^email:(.+)$"
+  url = "mailto:{1}"
+  class = "email-link"
+```
+{{% /notice %}}
+
 ## 📁 Prefix Aliases
 
 Map namespace prefixes to different paths:
+
+{{% notice title="Configuration" expanded="false" %}}
+```toml
+[params.modules.smartlink.prefixAlias]
+  "docs:" = "/documentation/"
+  "~" = "/home/"
+  "gh:" = "https://github.com/qgp9/hugo-smartlink/"
+  "user:" = "/users/"
+```
+{{% /notice %}}
 
 ### Documentation Prefix
 - [[docs:installation]] - Maps to `/documentation/installation` (created with `[[docs:installation]]`)

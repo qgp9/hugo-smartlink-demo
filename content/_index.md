@@ -30,11 +30,13 @@ Here are some examples of what you can do:
 
 ## Raw Syntax Example
 
-You can display the raw `[\[wikilink]]` syntax in your documentation by escaping it, like this:
+You can display the raw `[[wikilink]]` syntax in your documentation by escaping it, like this:
 
 ```markdown
-This is the raw syntax: [\[my-page]]
+This is the raw syntax: [[my-page]]
 ```
+
+This is the raw syntax: [[my-page]]
 
 Which renders as:
 
