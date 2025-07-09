@@ -1,34 +1,43 @@
 ---
 title: "Hugo SmartLink Demo"
-description: "A real, working demo of the hugo-smartlink module. Only real features and links are shown."
-date: 2024-07-09
-draft: false
 ---
 
-# Hugo SmartLink Demo
 
-이 사이트는 [hugo-smartlink](https://github.com/qgp9/hugo-smartlink) 모듈의 실제 동작 예시만을 보여줍니다. 
+This site demonstrates the features of the **Hugo SmartLink** module, a powerful tool for adding wiki-style link functionality to your Hugo static site.
 
-- 모든 예제, 링크, 기능은 실제로 동작합니다.
-- 존재하지 않는 기능, 상상 옵션, 가짜 링크, 허구의 설명은 포함하지 않습니다.
+Explore the sections to learn how to install, configure, and use Hugo SmartLink in your own projects.
 
-## SmartLink란?
+Here are some examples of what you can do:
 
-SmartLink는 Hugo에서 위키링크, JIRA, GitHub 이슈, Slack 채널, 이메일 등 다양한 패턴의 링크를 자동으로 변환해주는 모듈입니다.
+- Link to another page: [[getting-started]]. This is created using the syntax `[\[getting-started]]`.
+- Hugo SmartLink is case-insensitive by default, so [[Getting Started]] works too (created with `[\[Getting Started]]`).
 
-## 실제 동작 예시
+## Explore the Documentation
 
-- `[[examples]]` → `/examples`로 연결되는 위키링크
-- `[[PROJ-123]]` → JIRA 이슈 링크
-- `[[#42]]` → GitHub 이슈 링크
-- `[[slack:#general]]` → Slack 채널 링크
-- `[[email:contact@example.com]]` → 이메일 링크
+- **[[getting-started]]**: Learn how to install and quickly start using the module.
+- **[[configuration]]**: Dive into the various configuration options available.
+- **[[examples]]**: See live examples of different link types and patterns.
+- **[[performance]]**: Understand the performance characteristics of the module.
+- **[[for-developers]]**: Find guidance for integrating SmartLink into your own themes.
 
-## 메뉴/사이드바
+{{% notice style="green" title="Raw Syntax" expanded="true" %}}
+- **[\\[getting-started]]**: Learn how to install and quickly start using the module.
+- **[\\[configuration]]**: Dive into the various configuration options available.
+- **[\\[examples]]**: See live examples of different link types and patterns.
+- **[\\[performance]]**: Understand the performance characteristics of the module.
+- **[\\[for-developers]]**: Find guidance for integrating SmartLink into your own themes.
+{{% /notice %}}
 
-- 좌측 메뉴는 실제로 동작하는 shortcuts만 포함되어 있습니다.
-- 메뉴에 없는 링크, 동작하지 않는 기능은 없습니다.
+## Raw Syntax Example
 
----
+You can display the raw `[\[wikilink]]` syntax in your documentation by escaping it, like this:
 
-*이 데모 사이트의 모든 내용은 실제로 검증 가능합니다. 없는 기능, 거짓 설명, 상상 옵션은 절대 포함하지 않습니다.* 
+```markdown
+This is the raw syntax: [\[my-page]]
+```
+
+Which renders as:
+
+{{% notice style="green" title="Raw Syntax" expanded="true" %}}
+This is the raw syntax: [\\[my-page]]
+{{% /notice %}}

@@ -15,59 +15,60 @@ Explore the full range of Hugo SmartLink capabilities through these comprehensiv
 The most common use case - simple wiki-style links that connect your content:
 
 ### Internal Page Links
-- [[home]] - Link to homepage
-- [[documentation]] - Link to documentation section
-- [[interactive]] - Link to interactive tools
+- [[home]] - Link to homepage (created with `[[home]]`)
+- [[documentation]] - Link to documentation section (created with `[[documentation]]`)
+- [[interactive]] - Link to interactive tools (created with `[[interactive]]`)
 
 ### With Custom Labels
-- [[examples|See more examples]] - Link with custom label
-- [[documentation|Read the docs]] - Another custom label example
+- [[examples|See more examples]] - Link with custom label (created with `[[examples|See more examples]]`)
+- [[documentation|Read the docs]] - Another custom label example (created with `[[documentation|Read the docs]]`)
 
 ## 🏢 External System Integration
 
 SmartLink can integrate with various external systems and tools:
 
 ### JIRA Issues
-- [[PROJ-123]] - Project issue
-- [[BUG-456]] - Bug report
-- [[FEAT-789]] - Feature request
+- [[PROJ-123]] - Project issue (created with `[[PROJ-123]]`)
+- [[BUG-456]] - Bug report (created with `[[BUG-456]]`)
+- [[FEAT-789]] - Feature request (created with `[[FEAT-789]]`)
 
 ### GitHub Integration
-- [[#42]] - GitHub issue
-- [[PR#15]] - Pull request
-- [[gh:issues/42]] - Using prefix alias
+- [[#42]] - GitHub issue (created with `[[#42]]`)
+- [[PR#15]] - Pull request (created with `[[PR#15]]`)
+- [[gh:issues/42]] - Using prefix alias (created with `[[gh:issues/42]]`)
+- [[https://github.com/qgp9/hugo-smartlink/issues/123]] - Displays as 'qgp9/hugo-smartlink#123' (created with `[[https://github.com/qgp9/hugo-smartlink/issues/123]]`)
 
 ### Communication Tools
-- [[slack:#general]] - Slack channel
-- [[slack:#random]] - Another Slack channel
-- [[email:team@company.com]] - Email link
+- [[slack:#general]] - Slack channel (created with `[[slack:#general]]`)
+- [[slack:#random]] - Another Slack channel (created with `[[slack:#random]]`)
+- [[email:team@company.com]] - Email link (created with `[[email:team@company.com]]`)
 
 ## 📁 Prefix Aliases
 
 Map namespace prefixes to different paths:
 
 ### Documentation Prefix
-- [[docs:installation]] - Maps to `/documentation/installation`
-- [[docs:configuration]] - Maps to `/documentation/configuration`
-- [[docs:examples]] - Maps to `/documentation/examples`
+- [[docs:installation]] - Maps to `/documentation/installation` (created with `[[docs:installation]]`)
+- [[docs:configuration]] - Maps to `/documentation/configuration` (created with `[[docs:configuration]]`)
+- [[docs:examples]] - Maps to `/documentation/examples` (created with `[[docs:examples]]`)
 
 ### Home Prefix
-- [[~home]] - Maps to `/home/`
-- [[~about]] - Maps to `/home/about`
+- [[~home]] - Maps to `/home/` (created with `[[~home]]`)
+- [[~about]] - Maps to `/home/about` (created with `[[~about]]`)
 
 ### GitHub Prefix
-- [[gh:issues/42]] - Maps to GitHub issues
-- [[gh:pull/15]] - Maps to GitHub pull requests
+- [[gh:issues/42]] - Maps to GitHub issues (created with `[[gh:issues/42]]`)
+- [[gh:pull/15]] - Maps to GitHub pull requests (created with `[[gh:pull/15]]`)
 
 ## 🎨 Advanced Patterns
 
 ### Custom Pattern Matching
-- [[ISBN:978-0-7475-3269-9]] - Book reference
-- [[ISBN:978-0-7475-3269-9|Harry Potter]] - With custom label
+- [[ISBN:978-0-7475-3269-9]] - Book reference (created with `[\\[ISBN:978-0-7475-3269-9]]`)
+- [[ISBN:978-0-7475-3269-9|Harry Potter]] - With custom label (created with `[\\[ISBN:978-0-7475-3269-9|Harry Potter]]`)
 
 ### Complex URL Patterns
-- [[api:/users/{id}|User API]] - API documentation
-- [[docs:guides/getting-started|Getting Started]] - Nested documentation
+- [[api:/users/{id}|User API]] - API documentation (created with `[\\[api:/users/{id}|User API]]`)
+- [[docs:guides/getting-started|Getting Started]] - Nested documentation (created with `[\\[docs:guides/getting-started|Getting Started]]`)
 
 ## 🔧 Configuration Examples
 
@@ -94,20 +95,20 @@ Each link type gets its own CSS class for styling:
 ## 🚀 Real-World Scenarios
 
 ### Documentation Site
-- [[installation]] - Installation guide
-- [[configuration]] - Configuration options
-- [[troubleshooting]] - Common issues
-- [[api-reference]] - API documentation
+- [[installation]] - Installation guide (created with `[[installation]]`)
+- [[configuration]] - Configuration options (created with `[[configuration]]`)
+- [[troubleshooting]] - Common issues (created with `[[troubleshooting]]`)
+- [[api-reference]] - API documentation (created with `[[api-reference]]`)
 
 ### Project Management
-- [[PROJ-123]] - Current sprint task
-- [[#42]] - Related GitHub issue
-- [[slack:#project-updates]] - Team updates
+- [[PROJ-123]] - Current sprint task (created with `[[PROJ-123]]`)
+- [[#42]] - Related GitHub issue (created with `[[#42]]`)
+- [[slack:#project-updates]] - Team updates (created with `[[slack:#project-updates]]`)
 
 ### Knowledge Base
-- [[faq]] - Frequently asked questions
-- [[tutorials]] - Step-by-step guides
-- [[reference]] - Quick reference
+- [[faq]] - Frequently asked questions (created with `[[faq]]`)
+- [[tutorials]] - Step-by-step guides (created with `[[tutorials]]`)
+- [[reference]] - Quick reference (created with `[[reference]]`)
 
 ---
 

@@ -37,13 +37,16 @@ gc = true
   [params.modules]
     [params.modules.smartlink]
       output = "html"
-      normalizeEscapedWikilink = true
+      normalizeEscapedWikilink = true  # Enable escaped link normalization (HTML output only)
+      protectCodeBlocks = true  # Enable code block protection, not recommended for performance
+      maxCodeBlockIterations = 50  # Nested code block processing depth (1-50)
       
       # Prefix aliases for demonstration
       [params.modules.smartlink.prefixAlias]
         "docs:" = "/documentation/"
         "~" = "/home/"
         "gh:" = "https://github.com/qgp9/hugo-smartlink/"
+        "user:" = "/users/"
       
       # Comprehensive rule set for demonstrations
       [[params.modules.smartlink.rules]]
@@ -52,6 +55,12 @@ gc = true
         url = "https://example.atlassian.net/browse/{0}"
         class = "jira-link"
       
+      [[params.modules.smartlink.rules]]
+        name = "GitHub Issue URL Shortener"
+        pattern = "^https://github\\.com/([^/]+/[^/]+)/issues/(\\d+)$"
+        label = "{1}#{2}"
+        class = "github-url-shortener"
+
       [[params.modules.smartlink.rules]]
         name = "GitHub Issue"
         pattern = "^#([0-9]+)$"
