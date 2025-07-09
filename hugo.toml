@@ -17,6 +17,10 @@ buildExpired = false
 minify = true
 gc = true
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-0JELJCM18F'
+
 # Module configuration
 [module]
 [[module.imports]]
