@@ -2,3 +2,5 @@ github.com/McShelby/hugo-theme-relearn v0.0.0-20250707094454-9803d5122ebb h1:iTG
 github.com/McShelby/hugo-theme-relearn v0.0.0-20250707094454-9803d5122ebb/go.mod h1:mKQQdxZNIlLvAj8X3tMq+RzntIJSr9z7XdzuMomt0IM=
 github.com/qgp9/hugo-smartlink v0.0.0-20250709131745-4c064873c789 h1:rj/B1UdAkGbulCLx9XgIUJjfys6UIQHB1bdAT1jwxxU=
 github.com/qgp9/hugo-smartlink v0.0.0-20250709131745-4c064873c789/go.mod h1:djkug2gijhSNWPsqxjvWEWDHoO1Amp+PtZ/ldO+daHM=
+github.com/qgp9/hugo-smartlink v0.0.0-20250709211516-87f4b66a359a h1:I5dRm/NfEnX53/zmp/ftkjJLteDJwSxR1YkQZqpsqqk=
+github.com/qgp9/hugo-smartlink v0.0.0-20250709211516-87f4b66a359a/go.mod h1:djkug2gijhSNWPsqxjvWEWDHoO1Amp+PtZ/ldO+daHM=
