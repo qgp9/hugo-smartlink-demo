@@ -121,12 +121,12 @@ Map namespace prefixes to different paths:
 ## 🎨 Advanced Patterns
 
 ### Custom Pattern Matching
-- [[ISBN:978-0-7475-3269-9]] - Book reference (created with `[\\[ISBN:978-0-7475-3269-9]]`)
-- [[ISBN:978-0-7475-3269-9|Harry Potter]] - With custom label (created with `[\\[ISBN:978-0-7475-3269-9|Harry Potter]]`)
+- [[ISBN:978-0-7475-3269-9]] - Book reference (created with `[[ISBN:978-0-7475-3269-9]]`)
+- [[ISBN:978-0-7475-3269-9|Harry Potter]] - With custom label (created with `[[ISBN:978-0-7475-3269-9|Harry Potter]]`)
 
 ### Complex URL Patterns
-- [[api:/users/{id}|User API]] - API documentation (created with `[\\[api:/users/{id}|User API]]`)
-- [[docs:guides/getting-started|Getting Started]] - Nested documentation (created with `[\\[docs:guides/getting-started|Getting Started]]`)
+- [[api:/users/{id}|User API]] - API documentation (created with `[[api:/users/{id}|User API]]`)
+- [[docs:guides/getting-started|Getting Started]] - Nested documentation (created with `[[docs:guides/getting-started|Getting Started]]`)
 
 ## 🔧 Configuration Examples
 
