@@ -8,7 +8,7 @@ hugo_stats.json
 .hugo_build.lock
 
 # Hugo modules
-go.sum
+#go.sum
 
 # OS generated files
 .DS_Store
