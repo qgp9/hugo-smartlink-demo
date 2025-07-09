@@ -43,7 +43,7 @@ jobs:
       run: |
         hugo \
           --minify \
-          --baseURL "${{ steps.deployment.outputs.page_url }}/"
+          --baseURL "${{ steps.deployment.outputs.page_url }}/${{ github.event.repository.name }}/"
     
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
