@@ -17,3 +17,10 @@ smartlink:
 | `[[@user:admin]]` | [[@user:admin]] |
 | `[[+user:admin]]` | [[+user:admin]] |
 | `[[$user:admin]]` | [[$user:admin]] |
+
+```yaml
+smartlink:
+  usePageTitle: false
+  usePageTitlePrefixes: ["docs:", "-@", "+"]
+
+```
